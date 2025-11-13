@@ -6,7 +6,8 @@ let computerScore = 0;
 let humanScore = 0;
 
 function getComputerChoice() {
-    return Math.floor(Math.random() * 3) + 1;
+    let num =  Math.floor(Math.random() * 3);
+    return choiceArr[num]
 }
 
 function getHumanChoice(choiceArr) {
@@ -29,7 +30,7 @@ function playRound(computerChoice, humanChoice){
         scissors: 'paper',
         paper: 'rock'
     };
-    
+
     log(winnerObj[computerChoice])
     if (computerChoice === humanChoice) log(`It's a Draw, you both chose ${computerChoice}`)
     else if (winnerObj[computerChoice] === humanChoice) {
