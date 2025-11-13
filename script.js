@@ -21,8 +21,6 @@ function getHumanChoice(choiceArr) {
     return humanChoice;
 }
 
-
-
 function playGame(numRounds = 5) {
     let computerScore = 0;
     let humanScore = 0;
