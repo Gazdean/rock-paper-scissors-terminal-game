@@ -36,11 +36,11 @@ function playGame(numRounds = 5) {
 
         if (computerChoice === humanChoice) log(`It's a Draw, you both chose ${computerChoice}`)
         else if (winnerObj[computerChoice] === humanChoice) {
-            log(`You lose!, ${computerChoice} beats ${humanChoice}`);
+            log(`You lose! ${computerChoice} beats ${humanChoice}`);
             computerScore ++;
         }
         else if (winnerObj[humanChoice] === computerChoice) {
-            log(`You win!, ${humanChoice} beats ${computerChoice}`);
+            log(`You win! ${humanChoice} beats ${computerChoice}`);
             humanScore ++;
         }
     }   
