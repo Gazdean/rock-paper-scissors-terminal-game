@@ -5,7 +5,7 @@ const choiceArr = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let humanScore = 0;
 
-function getComputerChoice() {
+function getComputerChoice(choiceArr) {
     let num =  Math.floor(Math.random() * 3);
     return choiceArr[num]
 }
@@ -43,4 +43,4 @@ function playRound(computerChoice, humanChoice){
     }
 }
 
-playRound(getComputerChoice(), getHumanChoice(choiceArr))
+playRound(getComputerChoice(choiceArr), getHumanChoice(choiceArr))
