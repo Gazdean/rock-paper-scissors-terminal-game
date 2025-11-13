@@ -17,8 +17,29 @@ function getHumanChoice(choiceArr) {
     while (!humanChoice) {
         entryValue = prompt(message, entryValue).toLowerCase().trim();
         if (choiceArr.includes(entryValue)) humanChoice = entryValue;
-        else message += '\nPlease check the spelling'
+        else message += '\nPlease check the spelling';
     }
 
-    return humanChoice
+    return humanChoice;
 }
+
+function playRound(computerChoice, humanChoice){
+    const winnerObj = {
+        rock: 'scissors',
+        scissors: 'paper',
+        paper: 'rock'
+    };
+    
+    log(winnerObj[computerChoice])
+    if (computerChoice === humanChoice) log(`It's a Draw, you both chose ${computerChoice}`)
+    else if (winnerObj[computerChoice] === humanChoice) {
+        log(`You lose!, ${computerChoice} beats ${humanChoice}`);
+        computerScore ++;
+    }
+    else if (winnerObj[humanChoice] === computerChoice) {
+        log(`You win!, ${humanChoice} beats ${computerChoice}`);
+        humanScore ++;
+    }
+}
+
+playRound(getComputerChoice(), getHumanChoice(choiceArr))
