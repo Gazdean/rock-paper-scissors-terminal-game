@@ -49,9 +49,9 @@ function playGame(numRounds = 5) {
         playRound(getComputerChoice(choiceArr), getHumanChoice(choiceArr));
     }
 
-    if (computerScore > humanScore) alert(`You lose!!!\nYour opponent won ${computerScore} to ${humanScore}`)
-    else if (humanScore > computerScore) alert(`You win!!!\nYou won ${humanScore} to ${computerScore}`)
-    else  alert(`It's a draw!!!\nYou both scored ${humanScore}`)
+    if (computerScore > humanScore) log(`You lose!!!\nYour opponent won ${computerScore} to ${humanScore}`)
+    else if (humanScore > computerScore) log(`You win!!!\nYou won ${humanScore} to ${computerScore}`)
+    else  log(`It's a draw!!!\nYou both scored ${humanScore}`)
 }
 
 playGame()
